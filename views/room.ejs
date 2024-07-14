@@ -1,0 +1,51 @@
+<!-- Room.ejs file is the main template for the room UI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magus Room</title>
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+    </script>
+    <script defer src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/client.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="magus-logo" src="/magus-logo.png" alt="Magus Logo">
+
+    <div id="header">
+        <h1 id="room-id-display"></h1>
+        <div id="room-id-display"></div>
+        <button id="leave-room">Leave Room</button>
+   
+    </div>
+    
+    <div id="video-container">
+        <div id="video-grid"></div>
+
+    </div>
+
+    <!-- js script to populate room ID -->
+    <script>
+        const roomIdDisplay = document.getElementById('room-id-display');
+
+        roomIdDisplay.textContent = "Room ID: " + ROOM_ID;
+    </script>
+
+    <!-- js code to handle button click -->
+    <script>
+        const leaveRoomLink = document.getElementById('leave-room');
+
+        // add a click event listener to the anchor tag
+        leaveRoomLink.addEventListener('click', () => {
+            // perform redirection when anchor tag is clicked
+            window.location.href = '/disconnected.ejs';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

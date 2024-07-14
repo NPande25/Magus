@@ -1,0 +1,78 @@
+/* style.css file to style the application */
+
+#magus-logo {
+    position: absolute;
+    top: 8px; /* Adjust top position as needed */
+    left: 8px; /* Adjust left position as needed */
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-gap: 20px;
+    row-gap: 30px;
+    grid-auto-rows: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust the height to accommodate the mute button */
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Styling for the header */
+#header {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+}
+
+/* Styling for the room ID display */
+#room-id-display {
+    font-size: 24px; /* Increase font size */
+    margin-bottom: 20px; /* Add margin to create space between room ID and button */
+}
+
+/* Styling for the leave room button */
+#leave-room {
+    background-color: #f44336; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Add some border radius */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+/* Hover effect for the leave room button */
+#leave-room:hover {
+    background-color: #d32f2f; /* Darken the background color on hover */
+}
+
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+}
+
+
+#mute-button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

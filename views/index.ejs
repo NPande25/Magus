@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Room</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <img id="magus-logo" src="/magus-logo.png" alt="Magus Logo" style="width: 200px; height: auto">
+    <div class="container">
+        <h1>Welcome!</h1>
+        <div class="form-container">
+            <form action="authenticate.php" method="post">
+                <input type="text" name="username" class="input-field" placeholder="Your Name">
+                <input type="password" name="password" class="input-field" placeholder="Password">
+                <input type="text" name="room_id" class="input-field" placeholder="Room ID">
+                <button type="submit" class="button">Join a Room</button>
+            </form>
+        </div>
+        <div id="not-authorized-message" class="error-message"></div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>
