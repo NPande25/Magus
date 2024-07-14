@@ -1,0 +1,5 @@
+node_modules
+public/exit.png
+package-lock.json
+package.json
+*.DS_Store
