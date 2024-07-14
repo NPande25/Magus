@@ -6,15 +6,7 @@ document.getElementById('join-room-button').addEventListener('click', function(e
     const roomId = document.getElementById('room-id').value.trim();
 
     const authorizedUsers = {
-        'george': 'George',
         'nikhil': 'Nikhil',
-        'jack': 'Jack',
-        'luca': 'Luca',
-        'reena': 'Reena',
-        'ashvin': 'Ashvin',
-        'sonia': 'Sonia',
-        'aji': 'Aji',
-        'rekha': 'Rekha'
     };
     
     if (authorizedUsers.hasOwnProperty(userName) && authorizedUsers[userName] === password) {
